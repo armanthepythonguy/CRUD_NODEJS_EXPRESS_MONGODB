@@ -1,0 +1,26 @@
+{
+    "name": "crud-nodejs",
+    "version": "1.0.0",
+    "description": "CRUD App with NodeJS, Express, MongoDB",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev":"nodemon src/app.js"
+    },
+    "keywords": [
+        "crud",
+        "mongoDB",
+        "NodeJS",
+        "Express"
+    ],
+    "author": "Arman Aurobindo",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.1",
+        "express": "^4.17.2",
+        "mongoose": "^6.1.5"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
