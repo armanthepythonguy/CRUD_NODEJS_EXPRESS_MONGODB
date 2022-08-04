@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect("mongodb+srv://root:root@cluster0.evzm0.mongodb.net/CRUD_DATABASE?retryWrites=true&w=majority").then(()=>{
+mongoose.connect(process.env.MONGO_URI, {authSource:"admin",useNewUrlParser:true, useUnifiedTopology:true, user:process.env.USER, pass:process.env.PASS}).then(()=>{
     console.log("DB Connected Succesfully");
 }).catch((e)=>{
     console.log(e);

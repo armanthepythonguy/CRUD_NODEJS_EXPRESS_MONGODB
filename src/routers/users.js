@@ -14,8 +14,10 @@ router.post("/add", async(req, res)=>{
 
 router.get("/find/:email", async(req,res)=>{
     try {
-        const findingdata = await users.find({email:req.params.email});
-        res.send({ok:true});
+        const findingdata = await users.find({email:req.params.email})
+            .then((result)=>{
+                res.send(result);
+            })
     } catch (error) {
         res.send({ok:false});
     }
